@@ -50,7 +50,7 @@ const App = () => {
   const [ formErrors, setFormErrors ] = useState(initialFormErrors)
 
   const getPizzas = () => {
-    axios.get('http://localhost:4000/form')
+    axios.get('https://reqres.in/api/user')
       .then(response => {
         console.log(response.data)
         setPizzas(response.data)
@@ -62,7 +62,7 @@ const App = () => {
 
   const postNewPizza = newPizza => {
 
-    axios.post('httop://localhost:4000/form', newPizza)
+    axios.post('https://reqres.in/api/pizza', newPizza)
       .then(res => {
         setPizzas([...pizzas, res.data])
       })
